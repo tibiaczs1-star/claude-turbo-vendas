@@ -1,9 +1,9 @@
 {
-  "version": "2.2.0",
+  "version": "2.5.0",
   "build": 20261111,
-  "updated_at": "2026-11-11T07:15:00Z",
+  "updated_at": "2026-11-11T07:45:00Z",
   "min_required_version": "2.0.0",
-  "message": "Rede Turbo 13 Canais ativa com Claude Fable 5.1 e Opus 5.5. Ultracode e EGM Google integrados.",
+  "message": "Claudio Turbo v2.5.0 - Icone Masterpiece Robo-Caveira integrado, auto-update ativo, checagem de versoes na nuvem e catalogo completo de servicos.",
   "status": "ONLINE",
-  "download_url": "https://raw.githubusercontent.com/tibiaczs1-star/claude-turbo-vendas/main/dist/iniciar-claude-turbo.bat"
+  "download_url": "https://raw.githubusercontent.com/tibiaczs1-star/claude-turbo-vendas/main/dist/Claudio.exe"
 }
