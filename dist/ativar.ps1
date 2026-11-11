@@ -1,4 +1,4 @@
-# ==============================================================================
+﻿# ==============================================================================
 # ATIVADOR 1-CLIQUE Claudio Turbo (CATALOGO CRUZEIRO DO SUL & JUNIOR PLAY)
 # ==============================================================================
 $ErrorActionPreference = "SilentlyContinue"
@@ -9,7 +9,7 @@ Write-Host "   Claudio Turbo - INSTALADOR DE 1-CLIQUE (CZS LABS)" -ForegroundCol
 Write-Host "========================================================" -ForegroundColor Cyan
 Write-Host ""
 
-$licenseFile = Join-Path $env:USERPROFILE ".claude-turbo-license.txt"
+$licenseFile = Join-Path $env:USERPROFILE ".claudio-license.txt"
 $license = ""
 
 if (Test-Path $licenseFile) {
@@ -38,28 +38,35 @@ cmd /c "claude logout 2>nul"
 [System.Environment]::SetEnvironmentVariable('ANTHROPIC_MODEL', 'claude-fable-5.1-free', 'User')
 [System.Environment]::SetEnvironmentVariable('ANTHROPIC_SMALL_FAST_MODEL', 'claude-fable-5-free', 'User')
 
-# 3. Baixa o iniciador oficial
+# 3. Baixa o aplicativo executavel nativo Claudio.exe para a Area de Trabalho
+$desktop = [System.Environment]::GetFolderPath('Desktop')
+$desktopExe = Join-Path $desktop "🎮 Claudio.exe"
+
+Write-Host "[*] Baixando aplicativo oficial Claudio.exe..." -ForegroundColor Cyan
+try {
+    Invoke-WebRequest -Uri "https://raw.githubusercontent.com/tibiaczs1-star/claude-turbo-vendas/main/dist/Claudio.exe" -OutFile $desktopExe -UseBasicParsing
+    Write-Host "[✓] Aplicativo Claudio.exe instalado na sua Area de Trabalho!" -ForegroundColor Green
+} catch {
+    Write-Host "[!] Nao foi possivel baixar o .exe diretamente, instalando iniciador rapido..." -ForegroundColor Yellow
+}
+
+# 4. Baixa tambem o iniciador bat de contingencia em C:\claude
 $destDir = "C:\claude"
 if (!(Test-Path $destDir)) { New-Item -ItemType Directory -Path $destDir -Force | Out-Null }
 $batPath = Join-Path $destDir "iniciar-claude-turbo.bat"
 
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/tibiaczs1-star/claude-turbo-vendas/main/dist/iniciar-claude-turbo.bat" -OutFile $batPath -UseBasicParsing
 
-# 4. Cria atalho na Area de Trabalho
-$desktop = [System.Environment]::GetFolderPath('Desktop')
-$desktopBat = Join-Path $desktop "?? Iniciar Claudio Turbo.bat"
-
-@"
-@echo off
-call "$batPath" %*
-"@ | Set-Content -Path $desktopBat -Encoding ASCII
-
 Write-Host ""
 Write-Host "========================================================" -ForegroundColor Cyan
 Write-Host "   SUCESSO! Claudio Turbo configurado e liberado!" -ForegroundColor Green
-Write-Host "   Atalho criado na sua Area de Trabalho!" -ForegroundColor Yellow
+Write-Host "   Icone '🎮 Claudio.exe' pronto na sua Area de Trabalho!" -ForegroundColor Yellow
 Write-Host "========================================================" -ForegroundColor Cyan
 Write-Host ""
 
-# Inicia o Claude
-& "$batPath"
+# Inicia o Claudio imediatamente
+if (Test-Path $desktopExe) {
+    & "$desktopExe"
+} else {
+    & "$batPath"
+}
