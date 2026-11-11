@@ -1,11 +1,11 @@
-﻿# ==============================================================================
-# ATIVADOR 1-CLIQUE CLAUDE TURBO (CATALOGO CRUZEIRO DO SUL & JUNIOR PLAY)
+# ==============================================================================
+# ATIVADOR 1-CLIQUE Claudio Turbo (CATALOGO CRUZEIRO DO SUL & JUNIOR PLAY)
 # ==============================================================================
 $ErrorActionPreference = "SilentlyContinue"
 
 Write-Host ""
 Write-Host "========================================================" -ForegroundColor Cyan
-Write-Host "   CLAUDE TURBO - INSTALADOR DE 1-CLIQUE (CZS LABS)" -ForegroundColor Green
+Write-Host "   Claudio Turbo - INSTALADOR DE 1-CLIQUE (CZS LABS)" -ForegroundColor Green
 Write-Host "========================================================" -ForegroundColor Cyan
 Write-Host ""
 
@@ -47,7 +47,7 @@ Invoke-WebRequest -Uri "https://raw.githubusercontent.com/tibiaczs1-star/claude-
 
 # 4. Cria atalho na Area de Trabalho
 $desktop = [System.Environment]::GetFolderPath('Desktop')
-$desktopBat = Join-Path $desktop "🎮 Iniciar Claude Turbo.bat"
+$desktopBat = Join-Path $desktop "?? Iniciar Claudio Turbo.bat"
 
 @"
 @echo off
@@ -56,7 +56,7 @@ call "$batPath" %*
 
 Write-Host ""
 Write-Host "========================================================" -ForegroundColor Cyan
-Write-Host "   SUCESSO! Claude Turbo configurado e liberado!" -ForegroundColor Green
+Write-Host "   SUCESSO! Claudio Turbo configurado e liberado!" -ForegroundColor Green
 Write-Host "   Atalho criado na sua Area de Trabalho!" -ForegroundColor Yellow
 Write-Host "========================================================" -ForegroundColor Cyan
 Write-Host ""

@@ -1,6 +1,6 @@
 @echo off
 setlocal enabledelayedexpansion
-title Claude Turbo Client v2.2.0 (Auto-Update Ativo)
+title Claudio Turbo Client v2.2.0 (Auto-Update Ativo)
 
 set "LOCAL_VERSION=2.2.0"
 set "UPDATE_URL=https://raw.githubusercontent.com/tibiaczs1-star/claude-turbo-vendas/main/version.json"
@@ -8,7 +8,7 @@ set "SCRIPT_URL=https://raw.githubusercontent.com/tibiaczs1-star/claude-turbo-ve
 set "LICENSE_FILE=%USERPROFILE%\.claude-turbo-license.txt"
 
 echo ========================================================
-echo    CLAUDE TURBO - CLIENTE BLINDADO (v%LOCAL_VERSION%)
+echo    Claudio Turbo - CLIENTE BLINDADO (v%LOCAL_VERSION%)
 echo    Catalogo Cruzeiro do Sul & Junior Play
 echo ========================================================
 echo.
