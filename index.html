@@ -3,23 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Claude Turbo — Acesso Ilimitado & Cascatas de Alta Performance</title>
-  <meta name="description" content="Acesso ilimitado ao Claude Code com Claude Fable 5.1, Opus 5.5 e Gemini. Planos de 1, 7 e 15 dias com garantia blindada pró-rata por hora.">
+  <title>Acesso Claude Turbo • Catalogo Cruzeiro do Sul</title>
+  <meta name="description" content="Acesso Ilimitado de Alta Performance ao Claude Code (Fable 5.1, Opus 5.5, Gemini 4) com 13 canais em cascata e garantia blindada pro-rata por hora.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #09090b;
-      --card-bg: #121217;
-      --card-hover: #181820;
+      --bg: #07080a;
+      --bg-card: #0f1117;
+      --bg-card-hover: #151821;
       --border: rgba(255, 255, 255, 0.08);
-      --border-highlight: rgba(0, 210, 255, 0.4);
+      --border-active: rgba(0, 210, 255, 0.35);
       --accent-cyan: #00d2ff;
       --accent-green: #10b981;
+      --accent-purple: #8b5cf6;
       --accent-amber: #f59e0b;
       --text: #f4f4f6;
-      --text-muted: #8e8e99;
+      --text-muted: #8b8e9e;
       --font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
       --mono: 'JetBrains Mono', monospace;
     }
@@ -30,88 +31,167 @@
       color: var(--text);
       font-family: var(--font);
       line-height: 1.5;
-      padding: 40px 20px 80px;
+      padding: 0 0 80px;
+      overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
     }
 
-    .container {
-      max-width: 980px;
+    /* Topbar CZS */
+    .czs-topbar {
+      border-bottom: 1px solid var(--border);
+      background: rgba(7, 8, 10, 0.85);
+      backdrop-filter: blur(16px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .czs-topbar-inner {
+      max-width: 1100px;
       margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    /* Header */
-    header {
-      text-align: center;
-      margin-bottom: 48px;
+    .czs-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
     }
 
-    .badge {
+    .czs-logo {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      color: #000;
+      font-size: 16px;
+    }
+
+    .czs-brand-text {
+      font-weight: 700;
+      font-size: 15px;
+      color: #fff;
+    }
+
+    .czs-brand-sub {
+      font-size: 11px;
+      color: var(--text-muted);
+      display: block;
+    }
+
+    .czs-status-pill {
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      font-size: 11.5px;
+      font-weight: 600;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      color: var(--accent-green);
+      padding: 4px 12px;
+      border-radius: 999px;
+    }
+
+    .czs-status-dot {
+      width: 7px;
+      height: 7px;
+      background: var(--accent-green);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--accent-green);
+    }
+
+    /* Hero */
+    .hero {
+      max-width: 900px;
+      margin: 50px auto 40px;
+      text-align: center;
+      padding: 0 20px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       background: rgba(0, 210, 255, 0.08);
       border: 1px solid rgba(0, 210, 255, 0.25);
       color: var(--accent-cyan);
       font-size: 12px;
       font-weight: 700;
-      padding: 5px 12px;
+      padding: 6px 14px;
       border-radius: 999px;
       letter-spacing: 0.5px;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
     }
 
     h1 {
-      font-size: 38px;
+      font-size: 42px;
       font-weight: 800;
-      letter-spacing: -0.8px;
-      margin-bottom: 14px;
-      line-height: 1.2;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+      line-height: 1.15;
     }
 
     h1 span {
-      background: linear-gradient(135deg, #fff 30%, var(--accent-cyan) 100%);
+      background: linear-gradient(135deg, #fff 20%, var(--accent-cyan) 80%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    .subtitle {
+    .hero-subtitle {
       color: var(--text-muted);
       font-size: 16px;
-      max-width: 600px;
+      max-width: 650px;
       margin: 0 auto;
+      line-height: 1.6;
     }
 
-    /* Cards Grid */
+    /* Container */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Plans Grid */
     .plans-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
       margin-bottom: 40px;
     }
 
     .card {
-      background: var(--card-bg);
+      background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 20px;
-      padding: 28px 24px;
+      padding: 30px 24px;
       display: flex;
       flex-direction: column;
       position: relative;
-      transition: all 0.2s ease;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .card:hover {
       border-color: rgba(255, 255, 255, 0.2);
-      transform: translateY(-2px);
+      transform: translateY(-3px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
     }
 
     .card.popular {
-      background: linear-gradient(180deg, #161822 0%, var(--card-bg) 100%);
-      border-color: var(--border-highlight);
-      box-shadow: 0 12px 36px rgba(0, 210, 255, 0.12);
+      background: linear-gradient(180deg, #131722 0%, var(--bg-card) 100%);
+      border-color: var(--border-active);
+      box-shadow: 0 16px 48px rgba(0, 210, 255, 0.12);
     }
 
-    .card-tag {
+    .card-ribbon {
       position: absolute;
       top: 16px;
       right: 18px;
@@ -125,71 +205,73 @@
       letter-spacing: 0.5px;
     }
 
-    .plan-duration {
-      font-size: 14px;
+    .plan-header {
+      margin-bottom: 20px;
+    }
+
+    .plan-period {
+      font-size: 13px;
       font-weight: 700;
       color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 1px;
     }
 
-    .plan-title {
-      font-size: 24px;
+    .plan-name {
+      font-size: 26px;
       font-weight: 800;
       margin: 4px 0 16px;
       color: #fff;
     }
 
-    .price-box {
-      margin-bottom: 20px;
-    }
-
-    .price-val {
-      font-size: 38px;
+    .price-main {
+      font-size: 42px;
       font-weight: 800;
       color: #fff;
       line-height: 1;
     }
 
-    .price-unit {
-      font-size: 13px;
+    .price-meta {
+      font-size: 12.5px;
       color: var(--text-muted);
       margin-top: 6px;
     }
 
-    .price-hourly {
+    .price-rate {
       display: inline-block;
-      margin-top: 6px;
+      margin-top: 8px;
       font-family: var(--mono);
       font-size: 12px;
+      font-weight: 600;
       color: var(--accent-green);
       background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.2);
       padding: 2px 8px;
-      border-radius: 4px;
+      border-radius: 6px;
     }
 
-    .features {
+    .features-list {
       list-style: none;
-      margin: 20px 0 28px;
+      margin: 22px 0 30px;
       flex: 1;
       font-size: 13.5px;
       color: #ccc;
     }
 
-    .features li {
-      margin-bottom: 10px;
+    .features-list li {
+      margin-bottom: 11px;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
     }
 
-    .features li::before {
+    .features-list li::before {
       content: '✓';
       color: var(--accent-green);
       font-weight: 800;
+      font-size: 14px;
     }
 
-    /* Buttons */
     .btn {
       width: 100%;
       padding: 14px;
@@ -205,82 +287,127 @@
       border: none;
     }
 
-    .btn-primary {
-      background: #fff;
-      color: #000;
+    .btn-secondary {
+      background: #1e2029;
+      color: #fff;
+      border: 1px solid var(--border);
     }
 
-    .btn-primary:hover {
-      background: #e4e4e7;
+    .btn-secondary:hover {
+      background: #272a36;
+      border-color: rgba(255, 255, 255, 0.2);
     }
 
     .btn-cyan {
       background: var(--accent-cyan);
       color: #000;
-      box-shadow: 0 4px 18px rgba(0, 210, 255, 0.35);
+      box-shadow: 0 6px 20px rgba(0, 210, 255, 0.35);
     }
 
     .btn-cyan:hover {
-      background: #38e1ff;
+      background: #3ee2ff;
+      transform: translateY(-1px);
     }
 
-    /* Garantia Section */
-    .guarantee-box {
-      background: rgba(16, 185, 129, 0.05);
+    /* Garantia */
+    .guarantee-card {
+      background: rgba(16, 185, 129, 0.04);
       border: 1px solid rgba(16, 185, 129, 0.25);
-      border-radius: 16px;
-      padding: 24px;
+      border-radius: 18px;
+      padding: 26px;
       margin-bottom: 40px;
       display: flex;
-      gap: 18px;
+      gap: 20px;
       align-items: flex-start;
     }
 
     .guarantee-icon {
-      font-size: 32px;
+      font-size: 34px;
       line-height: 1;
     }
 
     .guarantee-title {
-      font-size: 16px;
-      font-weight: 700;
+      font-size: 17px;
+      font-weight: 800;
       color: #fff;
       margin-bottom: 6px;
     }
 
-    .guarantee-desc {
+    .guarantee-text {
       font-size: 13.5px;
       color: #a1a1aa;
       line-height: 1.6;
     }
 
-    .guarantee-desc b {
+    .guarantee-text b {
       color: #fff;
     }
 
-    /* Modal Checkout */
+    /* Como Funciona a Liberacao */
+    .flow-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 50px;
+    }
+
+    .step-box {
+      background: #0d0e13;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+    }
+
+    .step-num {
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      margin-bottom: 8px;
+    }
+
+    .step-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .step-desc {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* Modal Pix */
     .modal {
       display: none;
       position: fixed;
       top: 0; left: 0; width: 100vw; height: 100vh;
       background: rgba(0, 0, 0, 0.85);
-      backdrop-filter: blur(8px);
-      z-index: 9999;
+      backdrop-filter: blur(10px);
+      z-index: 99999;
       align-items: center;
       justify-content: center;
       padding: 16px;
     }
 
-    .modal-content {
-      background: #141418;
-      border: 1px solid var(--border-highlight);
+    .modal-box {
+      background: #121319;
+      border: 1px solid var(--border-active);
       border-radius: 20px;
       max-width: 440px;
       width: 100%;
       padding: 28px;
       position: relative;
       text-align: center;
-      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.9);
+      animation: pop 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes pop {
+      from { transform: scale(0.95); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
     }
 
     .close-btn {
@@ -290,30 +417,31 @@
       background: transparent;
       border: none;
       color: var(--text-muted);
-      font-size: 24px;
+      font-size: 26px;
       cursor: pointer;
     }
 
-    .qr-container {
+    .qr-frame {
       background: #fff;
       padding: 12px;
-      border-radius: 12px;
+      border-radius: 14px;
       display: inline-block;
-      margin: 16px 0;
+      margin: 16px 0 10px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
     }
 
-    .copia-cola-box {
+    .copia-box {
       display: flex;
       gap: 8px;
-      margin-top: 12px;
+      margin-top: 10px;
     }
 
-    .copia-cola-input {
+    .copia-input {
       flex: 1;
-      background: #09090b;
+      background: #08090d;
       border: 1px solid var(--border);
       color: #fff;
-      padding: 10px;
+      padding: 10px 12px;
       border-radius: 8px;
       font-size: 11px;
       font-family: var(--mono);
@@ -321,187 +449,235 @@
 
     /* Footer */
     footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 20px 20px;
       text-align: center;
       color: var(--text-muted);
       font-size: 13px;
-      margin-top: 40px;
     }
 
-    @media (max-width: 640px) {
-      h1 { font-size: 28px; }
-      .plans-grid { grid-template-columns: 1fr; }
-      .guarantee-box { flex-direction: column; }
+    @media (max-width: 860px) {
+      .plans-grid, .flow-steps { grid-template-columns: 1fr; }
+      h1 { font-size: 32px; }
+      .guarantee-card { flex-direction: column; }
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
+  <!-- TOPBAR -->
+  <header class="czs-topbar">
+    <div class="czs-topbar-inner">
+      <a class="czs-brand" href="/">
+        <div class="czs-logo">CZS</div>
+        <div>
+          <span class="czs-brand-text">Catalogo Cruzeiro do Sul</span>
+          <span class="czs-brand-sub">Divisao de IA &amp; Automacao</span>
+        </div>
+      </a>
+      <div class="czs-status-pill">
+        <span class="czs-status-dot"></span>
+        <span>Rede Turbo 13 Canais Online</span>
+      </div>
+    </div>
+  </header>
 
-    <!-- HEADER -->
-    <header>
-      <div class="badge">⚡ REDE TURBO ATIVA • 13 CANAIS EM PARALELO</div>
-      <h1>Acesso Ilimitado ao <span>Claude Turbo</span></h1>
-      <p class="subtitle">
-        Crie sem limites com Claude Fable 5.1, Opus 5.5 e Gemini. Zero bloqueios, rotação contínua e garantia pró-rata por hora.
-      </p>
-    </header>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">⚡ MOTOR DE ULTRA PERFORMANCE 2026</div>
+    <h1>Acesso Ilimitado ao <span>Claude Turbo</span></h1>
+    <p class="hero-subtitle">
+      Conecte-se ao poder maximo do Claude Fable 5.1, Opus 5.5 e Gemini com Ultracode e EGM. Sem rate limits travando seu fluxo, com roteamento continuo e garantia pro-rata por hora.
+    </p>
+  </section>
 
-    <!-- CARDS DE PREÇO -->
+  <!-- MAIN CONTAINER -->
+  <main class="container">
+
+    <!-- 3 CARTOES DE PLANOS -->
     <div class="plans-grid">
 
-      <!-- PLANO 1 DIA -->
+      <!-- 1 DIA -->
       <div class="card">
-        <span class="plan-duration">Passe Rápido</span>
-        <h3 class="plan-title">1 Dia</h3>
-        <div class="price-box">
-          <div class="price-val">R$ 20</div>
-          <div class="price-unit">24 horas de acesso total</div>
-          <div class="price-hourly">R$ 0,83 / hora</div>
+        <div class="plan-header">
+          <span class="plan-period">Passe Rapido</span>
+          <h3 class="plan-name">1 Dia</h3>
+          <div class="price-main">R$ 20</div>
+          <div class="price-meta">24 horas de uso irrestrito</div>
+          <div class="price-rate">R$ 0,83 / hora</div>
         </div>
-        <ul class="features">
+        <ul class="features-list">
           <li>Uso Ilimitado por 24 horas</li>
           <li>Claude Fable 5.1 &amp; Opus 5.5</li>
-          <li>13 Canais com failover instantâneo</li>
-          <li>Ultracode &amp; EGM habilitados</li>
-          <li>Ativação imediata via Pix</li>
+          <li>13 Canais com Failover em 0.1s</li>
+          <li>Ultracode + EGM habilitados</li>
+          <li>Ativacao instantanea via Pix</li>
         </ul>
-        <button class="btn btn-primary" onclick="openCheckout('1d', 'Passe 1 Dia', 20, '24 horas', 'R$ 0,83/h')">Comprar Passe 1 Dia ➔</button>
+        <button class="btn btn-secondary" onclick="openPixModal('1d', 'Passe 1 Dia', 20, '24 horas', 'R$ 0,83/h')">
+          Comprar 1 Dia (R$ 20) ➔
+        </button>
       </div>
 
-      <!-- PLANO 7 DIAS -->
+      <!-- 7 DIAS -->
       <div class="card">
-        <span class="plan-duration">Semanal</span>
-        <h3 class="plan-title">7 Dias</h3>
-        <div class="price-box">
-          <div class="price-val">R$ 80</div>
-          <div class="price-unit">168 horas contínuas</div>
-          <div class="price-hourly">R$ 0,47 / hora (43% OFF)</div>
+        <div class="plan-header">
+          <span class="plan-period">Semanal</span>
+          <h3 class="plan-name">7 Dias</h3>
+          <div class="price-main">R$ 80</div>
+          <div class="price-meta">168 horas continuas</div>
+          <div class="price-rate">R$ 0,47 / hora (43% OFF)</div>
         </div>
-        <ul class="features">
+        <ul class="features-list">
           <li>Uso Ilimitado por 7 dias</li>
           <li>Prioridade de fila na cascata</li>
           <li>Todos os 5 Orquestradores ativos</li>
-          <li>Instalador Windows + Android PWA</li>
-          <li>Suporte direto para dúvidas</li>
+          <li>Suporte direto para instalacao</li>
+          <li>Garantia pro-rata integral</li>
         </ul>
-        <button class="btn btn-primary" onclick="openCheckout('7d', 'Passe 7 Dias', 80, '168 horas', 'R$ 0,47/h')">Comprar Passe 7 Dias ➔</button>
+        <button class="btn btn-secondary" onclick="openPixModal('7d', 'Passe 7 Dias', 80, '168 horas', 'R$ 0,47/h')">
+          Comprar 7 Dias (R$ 80) ➔
+        </button>
       </div>
 
-      <!-- PLANO 15 DIAS (MAIS POPULAR) -->
+      <!-- 15 DIAS (DESTAQUE) -->
       <div class="card popular">
-        <div class="card-tag">MELHOR CUSTO-BENEFÍCIO</div>
-        <span class="plan-duration" style="color:var(--accent-cyan);">Quinzenal</span>
-        <h3 class="plan-title">15 Dias</h3>
-        <div class="price-box">
-          <div class="price-val">R$ 100</div>
-          <div class="price-unit">360 horas de autonomia total</div>
-          <div class="price-hourly">R$ 0,27 / hora (67% OFF)</div>
+        <div class="card-ribbon">MAIS POPULAR</div>
+        <div class="plan-header">
+          <span class="plan-period" style="color:var(--accent-cyan);">Quinzenal</span>
+          <h3 class="plan-name">15 Dias</h3>
+          <div class="price-main">R$ 100</div>
+          <div class="price-meta">360 horas de autonomia total</div>
+          <div class="price-rate">R$ 0,27 / hora (67% OFF)</div>
         </div>
-        <ul class="features">
+        <ul class="features-list">
           <li><b>Uso Ilimitado por 15 dias</b></li>
-          <li>Máxima prioridade em todos os canais</li>
-          <li>Suíte completa (Code, Game, Design, Sites, Social)</li>
-          <li>Acesso a novos modelos adicionados</li>
-          <li>Garantia estendida pró-rata</li>
+          <li>Maxima prioridade de throughput</li>
+          <li>Acesso a todos os lancamentos da rede</li>
+          <li>Scripts protegidos de 1-clique</li>
+          <li>Menor custo por hora garantido</li>
         </ul>
-        <button class="btn btn-cyan" onclick="openCheckout('15d', 'Passe 15 Dias', 100, '360 horas', 'R$ 0,27/h')">Garantir Oferta 15 Dias ➔</button>
+        <button class="btn btn-cyan" onclick="openPixModal('15d', 'Passe 15 Dias', 100, '360 horas', 'R$ 0,27/h')">
+          Garantir 15 Dias (R$ 100) ➔
+        </button>
       </div>
 
     </div>
 
-    <!-- BOX DE GARANTIA BLINDADA -->
-    <div class="guarantee-box">
+    <!-- GARANTIA BLINDADA -->
+    <div class="guarantee-card">
       <div class="guarantee-icon">🛡️</div>
       <div>
-        <h4 class="guarantee-title">Garantia Blindada com Devolução Pró-Rata por Hora</h4>
-        <p class="guarantee-desc">
-          Se você encontrar qualquer problema técnico em qualquer solução implementada que nossa equipe não consiga resolver, 
-          <b>nós devolvemos o valor do tempo restante que sobrou</b>.
-          Como o uso é ilimitado, a devolução é calculada por hora desde a liberação da conta. 
-          <i>Exemplo:</i> Usou 4 horas do Passe de 1 Dia (R$ 0,83/h)? Retira-se apenas R$ 3,32 de consumo e <b>devolvemos R$ 16,68 imediatamente via Pix</b>. Risco rigorosamente zero para você.
+        <h4 class="guarantee-title">Garantia Blindada com Devolucao Pro-Rata por Hora</h4>
+        <p class="guarantee-text">
+          Se você encontrar qualquer problema técnico em qualquer solucao implementada que nossa equipe nao consiga resolver, 
+          <b>nos devolvemos o valor do tempo restante que sobrou</b>. 
+          Como o acesso e ilimitado, a devolução e dividida por hora desde a liberação da conta. 
+          <i>Exemplo:</i> Usou 4 horas do Passe de 1 Dia (R$ 0,83/h)? Consumiu apenas R$ 3,32 e <b>devolvemos R$ 16,68 imediatamente via Pix</b>. Risco rigorosamente zero para voce.
         </p>
       </div>
     </div>
 
-    <!-- FOOTER -->
-    <footer>
-      <p>© 2026 Claude Turbo • Junior Play &amp; CZS Labs. Todos os direitos reservados.</p>
-      <p style="margin-top:6px; font-size:12px;">Dúvidas ou atendimento comercial? <a href="https://api.whatsapp.com/send?phone=5568999999999&text=Ol%C3%A1!%20Tenho%20d%C3%BAvidas%20sobre%20o%20Claude%20Turbo" target="_blank" style="color:var(--accent-cyan); text-decoration:none;">Fale no WhatsApp VIP</a></p>
-    </footer>
+    <!-- PASSO A PASSO -->
+    <div style="margin-bottom: 20px; text-align: center;">
+      <h3 style="color:#fff; font-size:20px; font-weight:700;">Como Funciona o Acesso em 3 Passos</h3>
+    </div>
+    <div class="flow-steps">
+      <div class="step-box">
+        <div class="step-num">PASSO 01</div>
+        <h4 class="step-title">Escolha e Pague no Pix</h4>
+        <p class="step-desc">Selecione seu passe, escaneie o QR Code ou copie a chave Pix com valor exato.</p>
+      </div>
+      <div class="step-box">
+        <div class="step-num">PASSO 02</div>
+        <h4 class="step-title">Envie o Comprovante</h4>
+        <p class="step-desc">Clique no botão do WhatsApp para enviar o comprovante diretamente ao suporte.</p>
+      </div>
+      <div class="step-box">
+        <div class="step-num">PASSO 03</div>
+        <h4 class="step-title">Receba o Script Protegido</h4>
+        <p class="step-desc">Assim que validamos, você recebe o comando de 1-clique que configura tudo no seu PC na hora!</p>
+      </div>
+    </div>
 
-  </div>
+  </main>
 
   <!-- MODAL PIX CHECKOUT -->
-  <div id="checkout-modal" class="modal">
-    <div class="modal-content">
-      <button class="close-btn" onclick="closeCheckout()">&times;</button>
+  <div id="pix-modal" class="modal">
+    <div class="modal-box">
+      <button class="close-btn" onclick="closePixModal()">&times;</button>
       
-      <span id="m-plan-badge" class="badge">PIX INSTANTÂNEO</span>
-      <h3 id="m-plan-title" style="color:#fff; font-size:22px; margin:8px 0 4px;">Passe 15 Dias</h3>
-      <div style="font-size:28px; font-weight:800; color:var(--accent-cyan); margin-bottom:4px;" id="m-plan-price">R$ 100,00</div>
-      <p style="color:var(--text-muted); font-size:12px;" id="m-plan-sub">Tarifa: R$ 0,27/hora • 360 horas de acesso</p>
+      <span class="czs-status-pill" style="margin-bottom:12px;">PAGAMENTO PIX DIRETO</span>
+      <h3 id="modal-title" style="color:#fff; font-size:22px; margin:4px 0;">Passe 15 Dias</h3>
+      <div id="modal-price" style="font-size:32px; font-weight:800; color:var(--accent-cyan); margin:6px 0;">R$ 100,00</div>
+      <p id="modal-rate" style="color:var(--text-muted); font-size:12px; margin-bottom:12px;">Tarifa: R$ 0,27/h • 360 horas de acesso</p>
 
-      <div class="qr-container">
-        <img id="m-qr-img" src="" alt="QR Code Pix" style="width:160px; height:160px; display:block;">
+      <div class="qr-frame">
+        <img id="modal-qr" src="" alt="QR Code Pix" style="width:160px; height:160px; display:block;">
       </div>
 
-      <p style="font-size:12px; color:var(--text-muted); margin-bottom:8px;">Pague escaneando o QR Code ou copie o código Pix abaixo:</p>
+      <p style="font-size:12px; color:var(--text-muted); margin-bottom:8px;">Pague via Pix e mande o comprovante para liberarmos sua senha:</p>
 
-      <div class="copia-cola-box">
-        <input type="text" id="m-pix-code" class="copia-cola-input" readonly value="">
-        <button class="btn btn-primary" style="width:auto; padding:8px 14px; font-size:12px;" onclick="copyPix()">Copiar</button>
+      <div class="copia-box">
+        <input type="text" id="modal-copia" class="copia-input" readonly value="">
+        <button class="btn btn-secondary" style="width:auto; padding:8px 14px; font-size:12px;" onclick="copyCode()">Copiar</button>
       </div>
 
-      <div style="margin-top:16px; display:flex; flex-direction:column; gap:8px;">
-        <a id="m-whatsapp-btn" href="#" target="_blank" class="btn btn-cyan" style="font-size:13px; padding:12px;">
-          ✓ Confirmar &amp; Liberar no WhatsApp ➔
+      <div style="margin-top:18px;">
+        <a id="modal-zap-btn" href="#" target="_blank" class="btn btn-cyan" style="font-size:13.5px; padding:13px; text-decoration:none;">
+          📲 Enviar Comprovante no WhatsApp ➔
         </a>
       </div>
     </div>
   </div>
 
+  <!-- FOOTER -->
+  <footer>
+    <div style="max-width:800px; margin:0 auto;">
+      <p>© 2026 Catalogo Cruzeiro do Sul • Desenvolvido com padrao Masterpiece por Clovis Sampaio.</p>
+      <p style="margin-top:6px; font-size:12px; color:var(--text-muted);">
+        Cruzeiro do Sul, Acre • Brasil • Suporte Comercial VIP 24h
+      </p>
+    </div>
+  </footer>
+
   <script>
-    const PIX_KEY = "pix-unicenter@czslabs.com";
+    const CHAVE_PIX = "pix-unicenter@czslabs.com";
 
-    function openCheckout(id, title, price, duration, rate) {
-      document.getElementById('m-plan-title').textContent = title;
-      document.getElementById('m-plan-price').textContent = `R$ ${price},00`;
-      document.getElementById('m-plan-sub').textContent = `Tarifa: ${rate} • ${duration} de acesso total`;
+    function openPixModal(id, title, price, duration, rate) {
+      document.getElementById('modal-title').textContent = title;
+      document.getElementById('modal-price').textContent = `R$ ${price},00`;
+      document.getElementById('modal-rate').textContent = `Tarifa: ${rate} • ${duration} de acesso total`;
 
-      // Payload PIX demonstrativo padrao BR Code
-      const pixPayload = `00020126580014BR.GOV.BCB.PIX0136${PIX_KEY}5204000053039865405${price}.005802BR5918CLAUDE TURBO LABS6009CRUZEIRO 62070503***6304`;
+      const pixPayload = `00020126580014BR.GOV.BCB.PIX0136${CHAVE_PIX}5204000053039865405${price}.005802BR5918CATALOGO CRUZEIRO6009CRUZEIRO 62070503***6304`;
       
-      document.getElementById('m-pix-code').value = pixPayload;
-      document.getElementById('m-qr-img').src = `https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(pixPayload)}`;
+      document.getElementById('modal-copia').value = pixPayload;
+      document.getElementById('modal-qr').src = `https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(pixPayload)}`;
 
-      const zapMsg = `Olá! Acabei de gerar o Pix do *${title} (R$ ${price},00)* no site do Claude Turbo. Segue o comprovante para liberação imediata da minha chave!`;
-      document.getElementById('m-whatsapp-btn').href = `https://api.whatsapp.com/send?phone=5568999999999&text=${encodeURIComponent(zapMsg)}`;
+      const zapText = `Olá Clovis! Acabei de fazer o Pix do *${title} (R$ ${price},00)* no Catálogo CZS. Segue o comprovante em anexo para validação e liberação do meu script do Claude Turbo!`;
+      document.getElementById('modal-zap-btn').href = `https://api.whatsapp.com/send?phone=5568999999999&text=${encodeURIComponent(zapText)}`;
 
-      document.getElementById('checkout-modal').style.display = 'flex';
+      document.getElementById('pix-modal').style.display = 'flex';
     }
 
-    function closeCheckout() {
-      document.getElementById('checkout-modal').style.display = 'none';
+    function closePixModal() {
+      document.getElementById('pix-modal').style.display = 'none';
     }
 
-    function copyPix() {
-      const input = document.getElementById('m-pix-code');
-      input.select();
-      input.setSelectionRange(0, 99999);
-      navigator.clipboard.writeText(input.value).then(() => {
-        alert('Código Pix copiado com sucesso!');
+    function copyCode() {
+      const el = document.getElementById('modal-copia');
+      el.select();
+      el.setSelectionRange(0, 99999);
+      navigator.clipboard.writeText(el.value).then(() => {
+        alert('Chave Pix Copia e Cola copiada com sucesso!');
       }).catch(() => {
         document.execCommand('copy');
-        alert('Código Pix copiado!');
+        alert('Chave Pix copiada!');
       });
     }
 
-    window.onclick = function(event) {
-      const modal = document.getElementById('checkout-modal');
-      if (event.target === modal) {
-        closeCheckout();
-      }
+    window.onclick = function(e) {
+      const m = document.getElementById('pix-modal');
+      if (e.target === m) closePixModal();
     };
   </script>
 </body>
